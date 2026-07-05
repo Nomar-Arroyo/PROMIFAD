@@ -1,24 +1,49 @@
-/* src/App.css */
 .app-container {
+  min-height: 100vh;
+}
+
+.app-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  padding-top: calc(var(--nav-height) + 1.5rem);
 }
 
-.divider {
+.app-header {
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  color: var(--orange-accent);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header-line {
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
-  margin: 1.5rem 0 3rem 0;
+  background: linear-gradient(90deg, transparent, var(--orange-accent), transparent);
+  margin-top: 0.8rem;
+  opacity: 0.5;
 }
 
-.grid-layout {
+.inicio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.inicio-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .grid-layout {
+  .inicio-grid {
     grid-template-columns: 1fr;
+  }
+  .app-content {
+    padding: 1rem;
+    padding-top: calc(var(--nav-height) + 1rem);
   }
 }

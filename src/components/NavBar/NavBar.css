@@ -1,0 +1,71 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  letter-spacing: 2px;
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-btn:hover {
+  color: var(--text-light);
+  background: rgba(255, 107, 0, 0.08);
+}
+
+.nav-btn.activa {
+  color: var(--orange-accent);
+  background: rgba(255, 107, 0, 0.12);
+}
+
+.nav-icono {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.nav-indicador {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--orange-accent);
+  border-radius: 1px;
+}

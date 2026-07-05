@@ -1,5 +1,45 @@
-/* src/components/FaseRecuperacion/FaseRecuperacion.css */
-/* Reutiliza el marco decorativo importando la lógica visual de FaseEmergencia o definiendo especificidades */
 .fase-panel em {
-  color: var(--gold-muted);
+  color: var(--orange-muted);
+}
+
+.microcredito-control {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.microcredito-control .form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.microcredito-control .form-grupo label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.microcredito-control .form-grupo input {
+  max-width: 200px;
+}
+
+.microcredito-info {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.microcredito-info strong.suficiente {
+  color: #00C853;
+}
+
+.microcredito-info strong.insuficiente {
+  color: #FF1744;
+}
+
+.microcredito-control button {
+  align-self: flex-start;
 }

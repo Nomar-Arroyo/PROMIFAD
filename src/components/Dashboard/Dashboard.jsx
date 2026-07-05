@@ -20,7 +20,7 @@ export default function Dashboard({ personas, proyecto, log }) {
             <p className="empty-log">Esperando ejecución de fases...</p>
           ) : (
             log.map((entry, index) => (
-              <div key={index} className="log-entry">> {entry}</div>
+              <div key={index} className="log-entry">{'>'} {entry}</div>
             ))
           )}
         </div>
