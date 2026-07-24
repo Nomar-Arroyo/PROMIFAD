@@ -1,0 +1,41 @@
+.splash-map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 0;
+}
+
+.splash-map-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 0;
+}
+
+.splash-map-wrap .splash-map-leaflet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.splash-map-container .custom-icon {
+  background: none !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-map-container .custom-icon span {
+  font-size: 1.4rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+
+.splash-map-container .hospital-icon span {
+  font-size: 1.5rem;
+}

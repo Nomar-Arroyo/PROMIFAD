@@ -1,0 +1,370 @@
+.solicitudes-card {
+  background: var(--bg-panel);
+  border: var(--border-subtle);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.solicitudes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.solicitudes-header h3 {
+  color: var(--orange-accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.solicitudes-count {
+  font-size: 0.75rem;
+  color: var(--orange-accent);
+  background: rgba(255, 107, 0, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.solicitudes-filtros {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  border: var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+.filtro-btn:hover {
+  border-color: var(--orange-accent);
+  color: var(--orange-accent);
+}
+
+.filtro-btn.activo {
+  background: var(--orange-accent);
+  color: var(--bg-dark);
+  border-color: var(--orange-accent);
+}
+
+.filtro-count {
+  font-size: 0.6rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+}
+
+.filtro-btn.activo .filtro-count {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.solicitudes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.solicitud-item {
+  background: var(--bg-dark);
+  border: var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.solicitud-item:hover {
+  border-color: var(--orange-accent);
+}
+
+.solicitud-item.aceptada {
+  border-left: 3px solid #00C853;
+}
+
+.solicitud-item.rechazada {
+  border-left: 3px solid #FF1744;
+  opacity: 0.6;
+}
+
+.solicitud-item.enviado {
+  border-left: 3px solid #42A5F5;
+}
+
+.solicitud-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.solicitud-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.solicitud-nombre {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 0.2rem;
+}
+
+.solicitud-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.solicitud-id {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.solicitud-salud {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.estado-solicitud-badge {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.estado-solicitud-badge.pendiente {
+  background: rgba(255, 152, 0, 0.15);
+  color: #FF9800;
+}
+
+.estado-solicitud-badge.aceptada {
+  background: rgba(0, 200, 83, 0.12);
+  color: #00C853;
+}
+
+.estado-solicitud-badge.rechazada {
+  background: rgba(255, 23, 68, 0.15);
+  color: #FF1744;
+}
+
+.estado-solicitud-badge.enviado {
+  background: rgba(33, 150, 243, 0.12);
+  color: #42A5F5;
+}
+
+.solicitud-acciones {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-aceptar {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #00C853;
+  color: #00C853;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-aceptar:hover {
+  background: #00C853;
+  color: var(--bg-dark);
+}
+
+.btn-rechazar {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #FF1744;
+  color: #FF1744;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-rechazar:hover {
+  background: #FF1744;
+  color: white;
+}
+
+.btn-confirmar {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #42A5F5;
+  color: #42A5F5;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-confirmar:hover {
+  background: #42A5F5;
+  color: var(--bg-dark);
+}
+
+.btn-detalles {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.4rem;
+  border: none;
+  color: var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-detalles:hover {
+  color: var(--orange-accent);
+}
+
+.enviado-label {
+  font-size: 0.7rem;
+  color: #42A5F5;
+  font-weight: 600;
+}
+
+.rechazado-label {
+  font-size: 0.7rem;
+  color: #FF1744;
+  font-weight: 600;
+}
+
+/* Detalles expandibles */
+.solicitud-detalles {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 107, 0, 0.1);
+}
+
+.detalles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.detalle-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.detalle-grupo label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.detalle-grupo span {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.detalle-grupo input,
+.detalle-grupo select,
+.detalle-grupo textarea {
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.detalle-grupo.full {
+  grid-column: 1 / -1;
+}
+
+.situacion-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.situacion-tag.estable {
+  background: rgba(0, 200, 83, 0.12);
+  color: #00C853;
+}
+
+.situacion-tag.critico,
+.situacion-tag.crítico {
+  background: rgba(255, 23, 68, 0.15);
+  color: #FF1744;
+}
+
+.situacion-tag.leve {
+  background: rgba(255, 152, 0, 0.15);
+  color: #FF9800;
+}
+
+.situacion-tag.recuperado {
+  background: rgba(33, 150, 243, 0.12);
+  color: #42A5F5;
+}
+
+.detalles-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detalles-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.empty-msg {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .solicitud-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .solicitud-acciones {
+    flex-wrap: wrap;
+  }
+
+  .detalles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalles-form-row {
+    grid-template-columns: 1fr;
+  }
+}

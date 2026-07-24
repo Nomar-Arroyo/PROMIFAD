@@ -1,0 +1,127 @@
+.donante-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--bg-dark);
+  border-bottom: 1px solid rgba(0, 200, 83, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.donante-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2rem;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #00C853;
+  letter-spacing: 2px;
+}
+
+.donante-nav-brand small {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.donante-nav-logo {
+  font-size: 1.2rem;
+}
+
+.donante-nav-links {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.donante-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.donante-nav-btn:hover {
+  color: var(--text-light);
+  background: rgba(0, 200, 83, 0.08);
+}
+
+.donante-nav-btn.activa {
+  color: #00C853;
+  background: rgba(0, 200, 83, 0.12);
+}
+
+.donante-nav-icon {
+  font-size: 0.85rem;
+}
+
+.donante-nav-btn.activa::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: #00C853;
+  border-radius: 1px;
+}
+
+.donante-logout-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.donante-logout-btn:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+@media (max-width: 768px) {
+  .donante-nav-brand {
+    display: none;
+  }
+  .donante-nav-links {
+    gap: 0;
+  }
+  .donante-nav-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  .donante-nav-label {
+    display: none;
+  }
+}

@@ -1,0 +1,790 @@
+/* ============================================
+   SPLASH — Landing page
+   ============================================ */
+.splash-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.splash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.splash-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.splash-header-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a5276, #2e86c1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(46, 134, 193, 0.3);
+  line-height: 1;
+}
+
+.flag-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
+  font-size: 0.55rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+.splash-header-brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  letter-spacing: 1.5px;
+}
+
+.splash-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.splash-header-link {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.splash-header-link:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.splash-header-btn {
+  background: var(--orange-accent);
+  border: none;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.splash-header-btn:hover {
+  background: #e55e00;
+  box-shadow: 0 2px 12px rgba(255, 107, 0, 0.35);
+}
+
+/* ── Dropdown ── */
+.splash-dropdown-wrap {
+  position: relative;
+}
+
+.splash-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 220px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  padding: 0.4rem;
+  z-index: 1000;
+  animation: ddFadeIn 0.15s ease;
+}
+
+.splash-dropdown-right {
+  left: auto;
+  right: 0;
+}
+
+@keyframes ddFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.splash-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.splash-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.splash-dd-icon {
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  flex-shrink: 0;
+}
+
+.splash-dd-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-dd-text strong {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.splash-dd-text small {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.05rem;
+}
+
+/* ── Body: dos columnas ── */
+.splash-body {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  min-height: 680px;
+  height: 680px;
+}
+
+.splash-content {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.splash-main-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+
+.splash-highlight {
+  color: var(--orange-accent);
+}
+
+.splash-sub-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.splash-separator {
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange-accent), transparent);
+  margin-bottom: 1.2rem;
+  border-radius: 2px;
+}
+
+.splash-main-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.8rem;
+}
+
+/* ── Mapa ── */
+.splash-map-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.splash-map-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.splash-map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 0;
+}
+
+.splash-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg-panel);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.splash-map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.splash-map-legend .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.splash-map-legend .dot.hosp { background: transparent; font-size: 0.75rem; }
+.splash-map-legend .dot.red { background: #ff4444; }
+.splash-map-legend .dot.blue { background: #4488ff; }
+.splash-map-legend .dot.green { background: #00C853; }
+.splash-map-legend .dot.olive { background: #8B7728; }
+.splash-map-legend .dot.orange { background: #FF9800; }
+
+/* ── CTA: ¿Quieres ayudar? ── */
+.splash-cta {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.splash-cta-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.4rem;
+}
+
+.splash-cta-toggle:hover .splash-cta-title {
+  color: var(--text-light);
+}
+
+.splash-cta-toggle:hover .splash-cta-arrow {
+  transform: scale(1.2);
+}
+
+.splash-cta-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-light);
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.splash-cta-arrow {
+  font-size: 1.4rem;
+  color: var(--orange-accent);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.splash-cta-arrow.open {
+  transform: rotate(180deg);
+}
+
+.splash-cta-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+/* ── Panel expandible ── */
+.splash-cta-expandable {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.35s ease;
+  margin-top: 0;
+}
+
+.splash-cta-expandable.expanded {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+/* ── Tarjetas de acción ── */
+.splash-cta-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.splash-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2rem 2rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+  width: 300px;
+  min-height: 160px;
+}
+
+.splash-cta-card:hover {
+  border-color: var(--orange-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(255, 107, 0, 0.15);
+}
+
+.splash-cta-icon {
+  font-size: 2.6rem;
+}
+
+.splash-cta-card strong {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.splash-cta-card small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* ── Tipos de donación ── */
+.splash-donation-types {
+  margin-top: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.splash-donation-types-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+
+.splash-donation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.splash-donation-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.4rem 1.3rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.splash-donation-item:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.splash-donation-icon {
+  font-size: 1.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.splash-donation-item strong {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.splash-donation-item small {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Más Información ── */
+.splash-info {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.splash-info-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.splash-info-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 550px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.splash-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.splash-info-card {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: border-color 0.25s;
+}
+
+.splash-info-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.splash-info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.splash-info-card-header span {
+  font-size: 1.3rem;
+}
+
+.splash-info-card-header h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.splash-info-card-header.hosp   { border-left: 3px solid #4488ff; }
+.splash-info-card-header.rescue { border-left: 3px solid var(--orange-accent); }
+.splash-info-card-header.acopio { border-left: 3px solid #00C853; }
+
+.splash-info-card-body {
+  padding: 1rem;
+}
+
+.splash-info-card-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.splash-info-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.splash-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.splash-contact-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.splash-contact-wa {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* ── Footer ── */
+.splash-footer {
+  text-align: center;
+  padding: 1rem 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   FORMULARIOS DE LOGIN / REGISTRO
+   ============================================ */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-card {
+  background: var(--bg-panel);
+  border: var(--border-subtle);
+  border-radius: 16px;
+  padding: 2.5rem 2.6rem 2rem;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+.login-back {
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.login-back:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.login-logo-area {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a5276, #2e86c1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(46, 134, 193, 0.35);
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.login-logo span {
+  font-size: 1.6rem;
+}
+
+.flag-badge-lg {
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
+  font-size: 0.7rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+.login-heading {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.login-sub {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.login-separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-field span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+}
+
+.login-submit {
+  margin-top: 0.4rem;
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.login-submit-org {
+  border-color: #CE1126;
+  color: #CE1126;
+}
+.login-submit-org:hover:not(:disabled) {
+  background: #CE1126;
+  color: #fff;
+}
+
+.login-submit-don {
+  border-color: #00C853;
+  color: #00C853;
+}
+.login-submit-don:hover:not(:disabled) {
+  background: #00C853;
+  color: var(--bg-dark);
+}
+
+.login-switch-area {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.login-switch-area span {
+  margin-right: 0.4rem;
+}
+
+.login-switch-area button {
+  background: transparent;
+  border: none;
+  color: var(--orange-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-switch-area button:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .splash-body {
+    flex-direction: column;
+    padding: 1.5rem;
+    height: auto;
+    min-height: 350px;
+  }
+  .splash-content {
+    flex: none;
+  }
+  .splash-map-side {
+    min-height: 350px;
+  }
+  .splash-cta-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .splash-cta-card {
+    width: 100%;
+    max-width: 340px;
+  }
+  .splash-donation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .splash-info-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .splash-header {
+    padding: 1rem 1.2rem;
+  }
+  .splash-main-title {
+    font-size: 2rem;
+  }
+  .splash-cta {
+    padding: 2rem 1.5rem;
+  }
+  .splash-cta-title {
+    font-size: 1.4rem;
+  }
+  .splash-donation-grid {
+    grid-template-columns: 1fr;
+  }
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+}

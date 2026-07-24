@@ -1,0 +1,74 @@
+.indemn-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.indemn-stat {
+  flex: 1;
+  background: var(--bg-panel);
+  border: var(--border-subtle);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.indemn-stat-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.indemn-stat-val {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.indemn-stat-val.pendiente { color: #FFC107; }
+.indemn-stat-val.aprobado { color: #00C853; }
+.indemn-stat-val.total { color: var(--orange-accent); }
+
+.indemn-historial {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indemn-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.indemn-item {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: var(--border-subtle);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.indemn-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.indemn-persona {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.indemn-item-info {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.indemn-aprobar {
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.7rem;
+}

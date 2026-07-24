@@ -1,0 +1,127 @@
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--bg-dark);
+  border-bottom: 1px solid rgba(206, 17, 38, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.admin-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2rem;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #CE1126;
+  letter-spacing: 2px;
+}
+
+.admin-nav-brand small {
+  font-size: 0.6rem;
+  background: #CE1126;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.admin-nav-logo {
+  font-size: 1.1rem;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 0.2rem;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.admin-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.admin-nav-btn:hover {
+  color: var(--text-light);
+  background: rgba(206, 17, 38, 0.08);
+}
+
+.admin-nav-btn.activa {
+  color: #CE1126;
+  background: rgba(206, 17, 38, 0.12);
+}
+
+.admin-nav-icon {
+  font-size: 0.8rem;
+}
+
+.admin-nav-btn.activa::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: #CE1126;
+  border-radius: 1px;
+}
+
+.admin-logout-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.admin-logout-btn:hover {
+  border-color: #CE1126;
+  color: #CE1126;
+  background: rgba(206, 17, 38, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-nav-brand {
+    display: none;
+  }
+  .admin-nav-btn {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+  }
+  .admin-nav-label {
+    display: none;
+  }
+}
